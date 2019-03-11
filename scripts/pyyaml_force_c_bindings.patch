@@ -1,0 +1,15 @@
+--- __init__.py
++++ __init__.py
+@@ -13,6 +13,12 @@
+ try:
+     from cyaml import *
+     __with_libyaml__ = True
++    BaseLoader = CBaseLoader
++    SafeLoader = CSafeLoader
++    Loader = CLoader
++    BaseDumper = CBaseDumper
++    SafeDumper = CSafeDumper
++    Dumper = CDumper
+ except ImportError:
+     __with_libyaml__ = False
+
